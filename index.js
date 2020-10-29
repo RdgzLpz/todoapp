@@ -2,7 +2,7 @@
 
 const addTaskButton = document.querySelector( '#btn-add' );
 let contentContainer, myTasks, completedTasks, cleanAllToDoContainer, cleanAllCompletedTasks, toDoContainer, toDoList,
-     removeItemButton, readyItemButton, myTasksContainer, addTask, inputNewTask, input,errorMessageElement, goBack, 
+     removeItemButton, readyItemButton, myTasksContainer, inputNewTask, input,errorMessageElement, goBack, 
      completedTasksContainer, completedTasksList;
 
 function start( ) { 
@@ -36,17 +36,23 @@ function start( ) {
     addTaskButton.addEventListener( 'click', store );
     goBack.addEventListener( 'click', ( ) => switcher( 'first-button' ) );
 
+    const addTaskContainer = document.querySelector( '#a-t-container' );
+    const CompletedTasksContainer = document.querySelector( '#c-t-container' );
+
+    addTaskContainer.addEventListener( 'click', ( ) => switcher( 'add-task' ) );
+    completedTasksContainer.addEventListener( 'click', ( ) => switcher( 'completed-tasks' )  );
+
+
     showToDoes( );    
 }
 
 function switcher( goBackToTask ) {
-    let id = goBackToTask == 'first-button' ? goBackToTask : event.target.id;
-
+    let id = goBackToTask == 'first-button' || goBackToTask == 'completed-tasks' || goBackToTask ==  'add-task' ? goBackToTask : event.target.id;
+    
     myTasksContainer.style.display = 'none';
     toDoContainer.style.display = 'none';
     inputNewTask.style.display = 'none';
     completedTasksContainer.style.display = 'none';
-    inputNewTask.style.display = 'none';
 
     myTasks.style.borderBottom = 'none';
     addTask.style.borderBottom = 'none';
@@ -104,7 +110,7 @@ function validateInputData( inputElement) {
     let notBeginWithSpace = /^\s/.test(data) != true;
 
     let result = emptyString && notTooLong && notTooShort && notBeginWithSpace;
-    console.log(data)
+    
     if (!result) {
 	inputElement.valid = 'false';
         errorMessage( inputElement, emptyString, notTooLong, notTooShort, notBeginWithSpace );
