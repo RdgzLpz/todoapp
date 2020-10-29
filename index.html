@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar's to do app</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+        <div class="container">
+            <h1 id="app-title">Task reminder</h1>
+            <nav>
+                    <ul>
+                        <li id="fb-my-tasks">
+			    <button id="first-button">My tasks</button>
+ 			</li>
+                        <li class="flex">
+			    <button id="add-task">New</button>
+			    <img class="icon" src="icons/plus-square.svg" alt="icon" >
+			</li>
+                        <li class="flex">
+			    <button id="completed-tasks">Completed</button>
+  			    <img class="icon" src="icons/calendar-check.svg" alt="icon">
+  			</li>
+                    </ul>
+            </nav>
+   	    <div id="clean-all-to-do-container" class="flex" >
+    	        <button id="clear-all" class="0">Clean all</button>
+  		<img src="icons/trash-alt.svg" alt="icon" class="icon 0" >
+	    </div> 
+            <div id="content-container">
+                    <div class="my-tasks-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>           
+                        <p>When you add a new task will appear here!</p>
+                   </div>
+		   <ul id="to-do-container">
+
+                   </ul>
+                   <section id="input-task" class="invisible flex">
+                       <h2 class="subtitle">Add a new task:</h2>
+  			<div id="add-task-container" class="flex">
+ 		     	    <p id="error-message"></p>
+                            <input id="input" type="text"  id="input-text" placeholder="new task name!">
+                            <button id="btn-add">Add</button>
+			</div>
+                        <p id="comment">The tasks you add here will appear in "My tasks" section.</p>
+			<div id="go-back" class="flex" >
+			    <img class="icon" src="icons/arrow-left.svg" alt="icon">
+  			    <button id="see-tasks-btn">See tasks</button>
+			</div>
+                    </section>
+		    <section id="completed-tasks-container" class="invisible">
+		        <header>  
+			    <p id="any-task">You've not completed any task yet.</p>
+			    <h4 id="completed-tasks-title"></h4>
+   	    		    <div id="clean-all-completed-tasks" class="flex" >
+    	        		<button id="clear-all-completed-tasks" class="1">Clean all</button>
+  				<img src="icons/trash-alt.svg" alt="icon" class="icon 1" >
+	    		    </div> 
+			</header>
+  			<ul id="completed-tasks-list"></ul>
+		    </section>
+                </div>
+        </div>
+        <script src="index.js"></script>
+</body>
+</html>

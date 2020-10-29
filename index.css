@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    font-family: fantasy;
+}
+.container {
+    margin: auto;
+    max-width: 1260px;
+    display: flex;
+    flex-direction: column;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    margin-top: 0;
+    color: rgb(157, 182, 182);
+    background: rgb(36, 36, 36);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+nav > ul {
+    margin: 0;
+    padding-left: 0;
+    display: flex; 
+}
+nav > ul > li { 
+    padding: 0;
+    display: flex; 
+    flex: 1;
+}
+nav > ul > li >  button {
+    margin: 0;
+    border: 1px;
+    padding: 0;
+    background: none;
+    color: gray;
+    cursor: pointer;   
+}
+.icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+}
+.chosen {
+    text-decoration: underline 2px blue;
+}
+
+#first-button {
+    padding: .5em;
+    background: rgb( 50, 200, 255 );
+    color: #FFF;
+}
+#first-button:hover {
+    color: white;
+}
+button:hover {
+    background: beige;
+    color: blue;
+}   
+li {
+    list-style: none;
+    padding-top: 0.4em;
+}
+.invisible {
+    display: none;  
+}
+.visible {
+    display: block;
+}
+#clean-all-to-do-container button {
+    padding: .5em;
+    background: none;
+}
+#clean-all-to-do-container .icon {
+    width: 1.1rem;
+}
+
+/* My  tasks */
+.my-tasks-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90vh;
+    margin: 10px;
+   color: rgb(231, 227, 227);
+}
+.my-tasks-container > div {
+    width: 45%;
+    height: 4px;
+    margin: 3px;
+    margin-left: 20%;
+    background: rgb(100, 212, 255);
+}
+.my-tasks-container > div:first-of-type {
+    margin-top: 30px;
+    width: 50%;
+    height: 8px;
+}
+.my-tasks-container > div:nth-child(3) {
+    width: 60%;
+    height: 5px;
+}
+.my-tasks-container > div:last-of-type {
+    width: 40%;
+    height: 6px;
+}
+p {
+    color: #000;
+    text-align: center;
+    font-family: fantasy; 
+}
+/* To do container */
+#to-do-container {
+    padding-left: .5em;
+}
+.to-do-item {
+    padding-top: 0;
+    display: flex;
+    flex-direction: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.to-do-item p {
+    margin: 0;
+    flex: 2;
+    text-align: start;
+}
+.options-item-btn {
+    margin-right: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rm-item-btn {
+    font-size: 1.5em;
+    background: #FFF;
+    color: red;
+}
+.ready-item-btn { 
+    height: 1em;
+    cursor: pointer;
+}
+
+/* Add task*/
+h1 {
+    margin-bottom: 0;
+    color: #FFF;
+}
+#add-task-container {
+    margin: 0;
+    flex-direction: column;
+}
+#error-message {
+    margin: 0 .2em;
+    padding: .2rem;
+    display: none;
+    background: red;
+}
+#input {
+    margin-left: 0;
+    max-width: 500px;
+    height: 1em;
+}
+#input:invalid {
+    border: .1px solid red;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+#btn-add {
+    margin-left: -.3em;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: .6em;
+    width: 50%;
+    max-width: 10rem;
+    height: 2.5em;
+    color: #000;
+    background: rgb(255, 209, 2);
+}
+#comment {
+    color: rgb(203, 203, 218);
+}
+
+.subtitle {
+    text-align: center;
+    color: rgb( 50, 50, 50 );
+}
+#go-back {
+    align-content: center;
+    cursor: pointer;
+}
+#go-back .icon {
+    margin-right: .2.5rem;
+    width: 1em;
+}
+#see-tasks-btn {
+    padding: .5em;
+    background: none;
+}
+
+/* Completed tasks */
+#completed-tasks-container header {
+    justify-content: flex-start;
+}
+#completed-tasks-title {
+    margin: 0 0 2em .3em ;
+    border-bottom: .1px solid lightblue;
+    width: 9rem;
+}
+ #clean-all-completed-tasks {
+    margin-left: 20%;
+}
+#clean-all-completed-tasks .icon {
+    width: 15%;
+}
+#completed-tasks-list {
+    margin-top: 0;
+    margin-left: .3em;
+    padding-left: 0;
+}
+.completed-item-flex {
+    display: flex;
+}
+.completed-item:nth-child(odd) {
+    background: rgb(249, 249, 255);
+} 
+.completed-item span {
+    width: 90%;
+}
+.completed-task-icon {
+    width: 1rem;
+}
+#any-task {
+    text-align: center;
+}
+
+/*  Media queries */
+@media screen and (min-width:320px) {
+    button {
+        font-size: 1.05em;
+    }
+    input {
+        margin-top: 5px;
+        margin-left: 15%;
+    }
+
+}
+@media screen and (min-width:480px) {
+    li {
+        font-size: 1.1em;
+    }
+    #clean-all-completed-tasks {
+	margin-left: 45%;
+    }
+}
+@media screen and (min-width:720px) {
+    #clean-all-completed-tasks {
+	margin-left: 63%;
+    }
+}
+@media screen and (min-width:1024px) {
+    #content-container {
+	margin: 2.5% .5rem;
+    }
+    #clean-all-completed-tasks {
+	margin-left: 70%;
+    }
+}
+@media screen and (min-width:100px) {
+    input {
+        width: 70%;
+        padding: .5em;
+    }
+}
